@@ -8,13 +8,14 @@ import WorkSection from "../sections/work/work.section"
 import ExperimentsSection from "../sections/experiments/experiments.section"
 import ContactSection from "../sections/contact/contact.section"
 
+
 const IndexPage = () => (
   <Layout>
     <HeroSection />
     <AboutSection />
     <WorkSection />
     <ExperimentsSection />
-    <ContactSection/>
+    <ContactSection />
   </Layout>
 )
 

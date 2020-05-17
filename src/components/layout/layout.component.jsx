@@ -4,6 +4,7 @@ import { GlobalStyles } from "../../globalStyles/globalStyles"
 import Header from "../header/header.component"
 import Email from "../email/email.component"
 import Social from "../social/social.component"
+import Footer from "../footer/footer.component"
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
       {children}
       <Email />
       <Social />
+      <Footer />
     </>
   )
 }

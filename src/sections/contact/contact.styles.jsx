@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
+import CustomButton from "../../components/customButton/customButton.component"
 
 export const ContactContainer = styled.div`
   width: 40%;
   margin: 0 auto;
-  margin-bottom: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,4 +40,8 @@ export const Paragraph = styled.div`
   line-height: 30px;
   margin: 3rem 0 7rem 0;
   text-align: center;
+`
+
+export const Button = styled(CustomButton)`
+  margin-bottom: 25rem;
 `
