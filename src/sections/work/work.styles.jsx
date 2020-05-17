@@ -8,8 +8,8 @@ import GithubSVG from "../../assets/icons/github.inline.svg"
 import NewSVG from "../../assets/icons/new-window.inline.svg"
 
 export const WorkContainer = styled.div`
-  min-height: calc(100vh - 10rem);
   padding: 0 20rem;
+  margin-bottom: 15rem;
 
   @media ${device.tabLand} {
     padding: 10rem;
