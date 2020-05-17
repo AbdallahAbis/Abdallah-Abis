@@ -1,8 +1,9 @@
 import React from "react"
 
+import Title from "../../components/title/title.component"
+
 import {
   AboutContainer,
-  Title,
   Paragraph,
   SkillsContainer,
   Skill,
