@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
+import CustomButton from "../../components/customButton/customButton.component"
+
 export const HeroContainer = styled.div`
   height: 100vh;
   padding: 23rem 0 0 20rem;
@@ -85,61 +87,42 @@ export const Paragraph = styled.p`
     font-size: 1.8rem;
   }
 `
-export const Button = styled.button`
-  font-size: 1.8rem;
-  font-family: var(--font-secondary);
-  color: var(--color-secondary);
-  background: transparent;
-  padding: 1.8rem 2.2rem;
-  border: 1px solid currentColor;
-  border-radius: 5px;
-  cursor: pointer;
-
-  @media ${device.laptop} {
-    padding: 1.5rem 2rem;
-  }
-
+export const Button = styled(CustomButton)`
   @media ${device.phone} {
-    font-size: 2.3rem;
-    padding: 2.3rem 2.8rem;
     margin-bottom: 10rem;
-  }
-
-  @media ${device.smallPhone} {
-    font-size: 1.8rem;
   }
 `
 export const Email = styled.a`
-         position: absolute;
-         bottom: 5%;
-         font-size: 1.3rem;
-         font-family: var(--font-secondary);
-         color: var(--color-secondary);
-         background: transparent;
-         padding-left: 18rem;
+  position: absolute;
+  bottom: 5%;
+  font-size: 1.3rem;
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+  background: transparent;
+  padding-left: 18rem;
 
-         &::before {
-           content: "";
-           width: 15rem;
-           height: 1px;
-           background: var(--color-secondary);
+  &::before {
+    content: "";
+    width: 15rem;
+    height: 1px;
+    background: var(--color-secondary);
 
-           position: absolute;
-           top: 50%;
-           left: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
 
-           pointer-events: none;
-         }
+    pointer-events: none;
+  }
 
-         @media ${device.tabLand} {
-           bottom: 10%;
-         }
-         @media ${device.phone} {
-           bottom: 8%;
-           font-size: 1.7rem;
-         }
+  @media ${device.tabLand} {
+    bottom: 10%;
+  }
+  @media ${device.phone} {
+    bottom: 8%;
+    font-size: 1.7rem;
+  }
 
-         @media ${device.smallPhone} {
-           bottom: 5%;
-         }
-       `
+  @media ${device.smallPhone} {
+    bottom: 5%;
+  }
+`

@@ -2,8 +2,8 @@ import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
 export const AboutContainer = styled.div`
-  min-height: 100vh;
-  padding-left: 23rem;
+  min-height: calc(100vh - 10rem);
+  padding-left: 20rem;
   padding-right: 5rem;
   color: var(--color-primary);
   display: grid;
@@ -26,10 +26,6 @@ export const AboutContainer = styled.div`
     align-content: center;
     grid-gap: 5rem;
   }
-`
-export const Title = styled.h2`
-  color: var(--color-secondary);
-  font-size: 3.2rem;
 `
 export const Paragraph = styled.p`
   grid-column: 1;
