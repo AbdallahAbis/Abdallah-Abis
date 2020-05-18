@@ -1,7 +1,131 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import device from "../../globalStyles/media-queries"
 
 import CustomButton from "../../components/customButton/customButton.component"
+
+const flickerIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+const slideInBtm = keyframes`
+  0% {
+    transform: translateZ(-1400px) translateY(800px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+`
+
+const rollInLeft = keyframes`
+ 00% {
+    transform: translateX(-300px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  90%{
+    transform: translateX(20%);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  
+`
 
 export const HeroContainer = styled.div`
   height: 100vh;
@@ -46,6 +170,9 @@ export const Title = styled.h1`
   @media ${device.smallPhone} {
     font-size: 5.5rem;
   }
+
+  // Animation
+  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
 export const Slogan = styled.h2`
   color: var(--color-secondary);
@@ -58,6 +185,9 @@ export const Slogan = styled.h2`
   @media ${device.smallPhone} {
     font-size: 1.5rem;
   }
+
+  // Animation
+  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
 export const Paragraph = styled.p`
   font-size: 1.8rem;
@@ -86,11 +216,17 @@ export const Paragraph = styled.p`
   @media ${device.smallPhone} {
     font-size: 1.8rem;
   }
+
+  // Animation
+  animation: ${slideInBtm} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 `
 export const Button = styled(CustomButton)`
   @media ${device.phone} {
     margin-bottom: 10rem;
   }
+
+  // Animation
+  animation: ${slideInBtm} 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 `
 export const Email = styled.a`
   position: absolute;
@@ -105,7 +241,7 @@ export const Email = styled.a`
     content: "";
     width: 15rem;
     height: 1px;
-    background: var(--color-secondary);
+    background: var(--color-primary);
 
     position: absolute;
     top: 50%;
@@ -125,4 +261,7 @@ export const Email = styled.a`
   @media ${device.smallPhone} {
     bottom: 5%;
   }
+
+  // Animation
+  animation: ${rollInLeft} 0.5s ease-out 2.5s both;
 `

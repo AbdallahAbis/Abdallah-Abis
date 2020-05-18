@@ -1,5 +1,62 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import device from "../../globalStyles/media-queries"
+
+const rollInTop = keyframes`
+0% {
+    transform: translateY(-300px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-15px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+`
+const rollInRight = keyframes`
+0% {
+    transform: translateX(300px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(68px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateX(32px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+`
 
 export const HeaderContainer = styled.div`
   position: fixed;
@@ -92,5 +149,23 @@ export const Option = styled.a`
 
   @media ${device.phone} {
     font-size: 2.2rem;
+  }
+
+  // Animation
+
+  &:nth-child(1) {
+    animation: ${rollInTop} 2s ease-out both;
+  }
+  &:nth-child(2) {
+    animation: ${rollInTop} 2s ease-out 0.1s both;
+  }
+  &:nth-child(3) {
+    animation: ${rollInTop} 2s ease-out 0.2s both;
+  }
+  &:nth-child(4) {
+    animation: ${rollInTop} 2s ease-out 0.3s both;
+  }
+  &:nth-child(5) {
+    animation: ${rollInRight} 2s ease-out 0.4s both;
   }
 `
