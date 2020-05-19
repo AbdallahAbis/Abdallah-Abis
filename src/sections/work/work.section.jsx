@@ -1,4 +1,5 @@
 import React from "react"
+import WORK_DATA from "./data"
 
 import Title from "../../components/title/title.component"
 
@@ -13,45 +14,48 @@ import {
   Paragraph,
   TechnologiesContainer,
   Technology,
-  Button,
+  // Button,
 } from "./work.styles"
 
 const WorkSection = () => (
-  <WorkContainer
-    data-sal="slide-up"
-    data-sal-duration="1000"
-    data-sal-easing="easeOutQuart"
-  >
-    <Title>Latest Works.</Title>
-    <CardContainer
-      data-sal="slide-right"
+  <WorkContainer>
+    <Title
+      data-sal="slide-up"
       data-sal-duration="1000"
       data-sal-easing="easeOutQuart"
     >
-      <Mask className="mask" />
-      <IconsContainer>
-        <a href="">
-          <Github />
-        </a>
-        <a href="">
-          <NewWindow />
-        </a>
-      </IconsContainer>
-      <WorkTitle>Wear And Smile</WorkTitle>
-      <Paragraph>
-        Wear and Shop is my first website built using Reactjs and it's an
-        imaginary eCommerce website that was designed and developed by me. I
-        tried to implement most of the necessary things on an eCommerce website.
-      </Paragraph>
-      <TechnologiesContainer>
-        <Technology>React.js</Technology>
-        <Technology>Redux.js</Technology>
-        <Technology>Redux-saga</Technology>
-        <Technology>Firebase</Technology>
-      </TechnologiesContainer>
+      Latest Works.
+    </Title>
+    {WORK_DATA.map(
+      ({ title, shortDescription, technologies, github, link, imgUrl }, i) => (
+        <CardContainer
+          data-sal="slide-right"
+          data-sal-duration="1000"
+          data-sal-easing="easeOutQuart"
+          img={imgUrl}
+        >
+          <Mask className="mask" />
+          <IconsContainer>
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <Github />
+            </a>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <NewWindow />
+            </a>
+          </IconsContainer>
+          <WorkTitle>{title}</WorkTitle>
+          <Paragraph>{shortDescription}</Paragraph>
 
-      <Button>Show Case »</Button>
-    </CardContainer>
+          <TechnologiesContainer>
+            {technologies.map(tech => (
+              <Technology>{tech}</Technology>
+            ))}
+          </TechnologiesContainer>
+
+          {/* <Button>Show Case »</Button> */}
+        </CardContainer>
+      )
+    )}
   </WorkContainer>
 )
 

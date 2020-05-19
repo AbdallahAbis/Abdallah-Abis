@@ -1,8 +1,7 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
-import {rollInBottom} from '../../utils/animations'
-
+import { rollInBottom } from "../../utils/animations"
 
 export const EmailContainer = styled.div`
   position: fixed;
@@ -16,7 +15,7 @@ export const EmailContainer = styled.div`
     display: none;
   }
 
-  animation: ${rollInBottom} .5s ease-in 3s both;
+  animation: ${rollInBottom} 0.5s ease-in 3s both;
 `
 export const EmailAddress = styled.a`
   writing-mode: vertical-rl;
@@ -43,6 +42,7 @@ export const EmailAddress = styled.a`
 
   &:hover {
     color: var(--color-secondary);
+    
     &::after {
       background: var(--color-primary);
     }

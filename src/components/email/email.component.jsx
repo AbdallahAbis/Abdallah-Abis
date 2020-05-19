@@ -1,12 +1,12 @@
 import React from "react"
 
+import { email } from "../../info"
+
 import { EmailContainer, EmailAddress } from "./email.styles"
 
 const Email = () => (
   <EmailContainer>
-    <EmailAddress href="mailto:Abis.Abdallah@gmail.com">
-      Abis.Abdallah@gmail.com
-    </EmailAddress>
+    <EmailAddress href={`mailto:${email}`}>{email}</EmailAddress>
   </EmailContainer>
 )
 

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react"
 
-import MenuContext from "../../contexts/hamburgerMenu.context"
+import { navLinks } from "../../info"
 
 import Logo from "../logo/logo.component"
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu.component"
 
 import { HeaderContainer, OptionsContainer, Option } from "./header.styles"
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+const Header = ({ isOpen, setIsOpen }) => {
   const [className, setClassName] = useState("")
   useEffect(() => {
     let lastScroll = 0
@@ -29,19 +28,15 @@ const Header = () => {
     })
   }, [])
   return (
-    <MenuContext.Provider value={isOpen}>
-      <HeaderContainer className={className}>
-        <Logo />
-        <OptionsContainer className={isOpen}>
-          <Option>Blog.</Option>
-          <Option>About.</Option>
-          <Option>Work.</Option>
-          <Option>Experiments.</Option>
-          <Option>Contact.</Option>
-        </OptionsContainer>
-        <HamburgerMenu setIsOpen={setIsOpen} />
-      </HeaderContainer>
-    </MenuContext.Provider>
+    <HeaderContainer className={`${className} ${isOpen}`}>
+      <Logo />
+      <OptionsContainer className={isOpen}>
+        {navLinks.map(({ name, url }) => (
+          <Option href={url}>{name}</Option>
+        ))}
+      </OptionsContainer>
+      <HamburgerMenu setIsOpen={setIsOpen} />
+    </HeaderContainer>
   )
 }
 

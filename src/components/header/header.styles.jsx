@@ -23,6 +23,12 @@ export const HeaderContainer = styled.div`
     transform: translateY(-100%);
   }
 
+  @media ${device.tabPort} {
+    &.hide.true:nth-child(1) {
+      transform: translateY(0);
+    }
+  }
+
   @media ${device.phone} {
     padding: 2rem 3rem;
   }
@@ -32,10 +38,6 @@ export const OptionsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-
-  &.true {
-    transform: none;
-  }
 
   @media ${device.tabPort} {
     height: 100vh;
@@ -51,6 +53,10 @@ export const OptionsContainer = styled.div`
     transform: translateX(100%);
     transition: all 0.2s;
     z-index: 10;
+    &.true {
+      transform: none;
+      overflow: hidden;
+    }
   }
 
   @media ${device.phone} {

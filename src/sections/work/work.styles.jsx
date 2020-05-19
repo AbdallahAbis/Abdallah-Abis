@@ -3,7 +3,6 @@ import device from "../../globalStyles/media-queries"
 
 import CustomButton from "../../components/customButton/customButton.component"
 
-import bg from "../../assets/images/bg.png"
 import GithubSVG from "../../assets/icons/github.inline.svg"
 import NewSVG from "../../assets/icons/new-window.inline.svg"
 
@@ -21,7 +20,7 @@ export const WorkContainer = styled.div`
 export const CardContainer = styled.div`
   width: 80%;
   height: 45rem;
-  background: url(${bg});
+  background: ${({ img }) => `url(${img})`};
   background-size: cover;
   border: 3px solid var(--color-quaternary);
   border-radius: 5px;
@@ -48,7 +47,7 @@ export const CardContainer = styled.div`
         transform: translateX(60%);
       }
       &:nth-child(2) {
-        transform: translateX(-200%);
+        // transform: translateX(-200%);
         transition: all 0.2s;
       }
       &:nth-child(3) {
@@ -91,20 +90,26 @@ export const Mask = styled.div`
   transition: all 0.2s;
 `
 export const IconsContainer = styled.div`
-  width: 7rem;
+  height: 10rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
   position: absolute;
-  top: 3.5rem;
-  left: 5.5rem;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
   transition: all 0.2s 0.2s;
 
-  @media ${device.phone} {
+  @media ${device.tabLand} {
     top: 1.5rem;
     left: 3.5rem;
+    transform: none;
+    height: auto;
+    width: 7rem;
+    flex-direction: row;
   }
 `
 

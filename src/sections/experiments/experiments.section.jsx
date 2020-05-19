@@ -9,7 +9,9 @@ import {
   Experiment,
   CodePen,
   ExperimentTitle,
+  Image,
 } from "./experiments.styles"
+import EXPERIMENT_DATA from "./data"
 
 const ExperimentsSection = () => (
   <ExperimentsContainer
@@ -20,14 +22,17 @@ const ExperimentsSection = () => (
     <Title>Experiments.</Title>
 
     <Experiments>
-      <Experiment>
-        <a href="#">
-          <CodePen />
-        </a>
-        <ExperimentTitle>CSS Page Preloader.</ExperimentTitle>
-      </Experiment>
+      {EXPERIMENT_DATA.map(({ title, imgUrl, link }) => (
+        <Experiment>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <CodePen />
+          </a>
+          <Image img={imgUrl} />
+          <ExperimentTitle>{title}</ExperimentTitle>
+        </Experiment>
+      ))}
     </Experiments>
-    <CustomButton>See More</CustomButton>
+    {EXPERIMENT_DATA.length > 4 && <CustomButton>See More</CustomButton>}
   </ExperimentsContainer>
 )
 
