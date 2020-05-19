@@ -2,7 +2,7 @@ import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
 export const AboutContainer = styled.div`
-  min-height: calc(100vh - 10rem);
+  min-height: 100vh;
   padding-left: 20rem;
   padding-right: 5rem;
   color: var(--color-primary);

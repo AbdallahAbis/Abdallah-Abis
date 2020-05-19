@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
+import { rollInBottom } from "../../utils/animations"
+
 export const EmailContainer = styled.div`
   position: fixed;
   left: 10rem;
@@ -12,6 +14,8 @@ export const EmailContainer = styled.div`
   @media ${device.tabPort} {
     display: none;
   }
+
+  animation: ${rollInBottom} 0.5s ease-in 3s both;
 `
 export const EmailAddress = styled.a`
   writing-mode: vertical-rl;
@@ -38,6 +42,7 @@ export const EmailAddress = styled.a`
 
   &:hover {
     color: var(--color-secondary);
+    
     &::after {
       background: var(--color-primary);
     }

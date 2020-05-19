@@ -1,8 +1,10 @@
+const info = require("./src/info")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: info.siteTitle,
+    siteUrl: info.siteUrl,
+    description: info.siteDescription,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +26,7 @@ module.exports = {
         background_color: `#090117`,
         theme_color: `#090117`,
         display: `minimal-ui`,
-        icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/icons/siteIcons/icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -35,6 +37,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-react-helmet",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

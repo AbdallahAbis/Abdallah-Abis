@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
+import { rollInRight, rollInTop } from "../../utils/animations"
+
 export const HeaderContainer = styled.div`
   position: fixed;
   top: 0;
@@ -12,7 +14,21 @@ export const HeaderContainer = styled.div`
   padding: 2rem 10rem;
   z-index: 100;
   background: var(--color-tertiary);
-  box-shadow: 0 4px 10px 6px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+
+  &.show {
+    box-shadow: 0 1px 7px 6px rgba(0, 0, 0, 0.9);
+  }
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  @media ${device.tabPort} {
+    &.hide.true:nth-child(1) {
+      transform: translateY(0);
+    }
+  }
+
   @media ${device.phone} {
     padding: 2rem 3rem;
   }
@@ -22,10 +38,6 @@ export const OptionsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100%;
-
-  &.true {
-    transform: none;
-  }
 
   @media ${device.tabPort} {
     height: 100vh;
@@ -41,6 +53,10 @@ export const OptionsContainer = styled.div`
     transform: translateX(100%);
     transition: all 0.2s;
     z-index: 10;
+    &.true {
+      transform: none;
+      overflow: hidden;
+    }
   }
 
   @media ${device.phone} {
@@ -92,5 +108,23 @@ export const Option = styled.a`
 
   @media ${device.phone} {
     font-size: 2.2rem;
+  }
+
+  // Animation
+
+  &:nth-child(1) {
+    animation: ${rollInTop} 2s ease-out both;
+  }
+  &:nth-child(2) {
+    animation: ${rollInTop} 2s ease-out 0.1s both;
+  }
+  &:nth-child(3) {
+    animation: ${rollInTop} 2s ease-out 0.2s both;
+  }
+  &:nth-child(4) {
+    animation: ${rollInTop} 2s ease-out 0.3s both;
+  }
+  &:nth-child(5) {
+    animation: ${rollInRight} 2s ease-out 0.4s both;
   }
 `

@@ -9,7 +9,11 @@ import {
 } from "./contact.styles"
 
 const ContactSection = () => (
-  <ContactContainer>
+  <ContactContainer
+    data-sal="zoom-in"
+    data-sal-duration="1000"
+    data-sal-easing="easeOutQuart"
+  >
     <SubTitle>I’m looking for an opportunity</SubTitle>
     <ContactTitle>Get In Touch!</ContactTitle>
     <Paragraph>

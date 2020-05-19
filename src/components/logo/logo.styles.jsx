@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import LogoSVG from "../../assets/icons/logo.inline.svg"
 
+import { rollInLeftAndRotate } from "../../utils/animations"
+
 export const LogoIcon = styled(LogoSVG)`
   height: 3.5rem;
   width: 3.5rem;
@@ -12,4 +14,7 @@ export const LogoIcon = styled(LogoSVG)`
   &:hover {
     fill: var(--color-primary);
   }
+
+  // Animation
+  animation: ${rollInLeftAndRotate} 2s ease-out 0.4s both;
 `

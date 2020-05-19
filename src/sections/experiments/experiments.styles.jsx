@@ -41,6 +41,19 @@ export const Experiment = styled.div`
   max-width: 30rem;
   background: var(--color-quaternary);
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const Image = styled.div`
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  background: ${({ img }) => `url(${img})`};
+  background-position: center;
+  background-size: cover;
 `
 export const CodePen = styled(CodePenSVG)`
   height: 2.5rem;

@@ -1,33 +1,11 @@
 import styled from "styled-components"
-import device from "../../globalStyles/media-queries"
 
 export const SocialContainer = styled.div`
-  position: fixed;
-  bottom: 20%;
-  right: 10rem;
-
-  &::after {
-    content: "";
-    width: 0.5px;
-    height: 30rem;
-    background: var(--color-secondary);
-    position: absolute;
-    left: 50%;
-    bottom: -30rem;
-    transform: translate(-50%);
-    transition: all 0.5s;
-    pointer-events: none;
-  }
-
   &:hover {
     color: var(--color-secondary);
     &::after {
       background: var(--color-primary);
     }
-  }
-
-  @media ${device.tabPort} {
-    display: none;
   }
 `
 export const Icon = styled.a`

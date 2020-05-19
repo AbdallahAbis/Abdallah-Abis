@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
+import { rollInLeft, flickerIn } from "../../utils/animations"
+
 import CustomButton from "../../components/customButton/customButton.component"
 
 export const HeroContainer = styled.div`
@@ -46,6 +48,9 @@ export const Title = styled.h1`
   @media ${device.smallPhone} {
     font-size: 5.5rem;
   }
+
+  // Animation
+  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
 export const Slogan = styled.h2`
   color: var(--color-secondary);
@@ -58,12 +63,17 @@ export const Slogan = styled.h2`
   @media ${device.smallPhone} {
     font-size: 1.5rem;
   }
+
+  // Animation
+  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
 export const Paragraph = styled.p`
   font-size: 1.8rem;
   width: 50%;
   margin-bottom: 14rem;
   line-height: 30px;
+
+  transition-delay: 2.2s;
 
   @media ${device.laptop} {
     margin-bottom: 10rem;
@@ -88,6 +98,8 @@ export const Paragraph = styled.p`
   }
 `
 export const Button = styled(CustomButton)`
+  transition-delay: 2.5s;
+
   @media ${device.phone} {
     margin-bottom: 10rem;
   }
@@ -105,7 +117,7 @@ export const Email = styled.a`
     content: "";
     width: 15rem;
     height: 1px;
-    background: var(--color-secondary);
+    background: var(--color-primary);
 
     position: absolute;
     top: 50%;
@@ -125,4 +137,7 @@ export const Email = styled.a`
   @media ${device.smallPhone} {
     bottom: 5%;
   }
+
+  // Animation
+  animation: ${rollInLeft} 0.5s ease-out 2.5s both;
 `

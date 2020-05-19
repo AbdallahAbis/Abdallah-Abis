@@ -29,6 +29,8 @@ body {
   font-weight: 400;
   max-width: 1680px;
   position: relative;
+
+  overflow: ${({ isOpen }) => (isOpen ? "hidden" : "scroll")};
   
     @media ${device.phone} {
       padding: 0 3rem;
