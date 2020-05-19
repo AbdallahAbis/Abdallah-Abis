@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
+import Social from "../social/social.component"
 
 export const FooterContainer = styled.div`
   position: absolute;
@@ -21,5 +22,31 @@ export const FooterContainer = styled.div`
 
   @media ${device.phone} {
     font-size: 1.5rem;
+  }
+`
+export const SocialMedia = styled(Social)`
+  display: none;
+  @media ${device.tabPort} {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+
+    & > * {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  @media ${device.phone} {
+    top: -120%;
+    width: 50%;
+    & > * {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 `

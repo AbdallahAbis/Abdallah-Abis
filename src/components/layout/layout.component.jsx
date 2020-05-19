@@ -9,8 +9,9 @@ import { GlobalStyles } from "../../globalStyles/globalStyles"
 import Loader from "../loader/loader.component"
 import Header from "../header/header.component"
 import Email from "../email/email.component"
-import Social from "../social/social.component"
 import Footer from "../footer/footer.component"
+
+import { SocialMedia } from "./layout.styles"
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +35,7 @@ const Layout = ({ children }) => {
             <Header isOpen={isOpen} setIsOpen={setIsOpen} />
             {children}
             <Email />
-            <Social />
+            <SocialMedia />
             <Footer />
           </>
         )}
