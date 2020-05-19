@@ -1,62 +1,7 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
-const rollInTop = keyframes`
-0% {
-    transform: translateY(-300px);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    transform: translateY(-15px);
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateY(-8px);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-`
-const rollInRight = keyframes`
-0% {
-    transform: translateX(300px);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    transform: translateX(0);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    transform: translateX(68px);
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateX(0);
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateX(32px);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateX(0);
-    animation-timing-function: ease-out;
-  }
-`
+import { rollInRight, rollInTop } from "../../utils/animations"
 
 export const HeaderContainer = styled.div`
   position: fixed;
@@ -69,7 +14,15 @@ export const HeaderContainer = styled.div`
   padding: 2rem 10rem;
   z-index: 100;
   background: var(--color-tertiary);
-  box-shadow: 0 4px 10px 6px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+
+  &.show {
+    box-shadow: 0 1px 7px 6px rgba(0, 0, 0, 0.9);
+  }
+  &.hide {
+    transform: translateY(-100%);
+  }
+
   @media ${device.phone} {
     padding: 2rem 3rem;
   }

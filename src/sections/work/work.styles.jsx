@@ -176,7 +176,7 @@ export const TechnologiesContainer = styled.div`
   font-size: 1.3rem;
   color: var(--color-primary);
 
-  transition: all 0.2s 0.4s;
+  transition: all 0.2s;
 
   @media ${device.phone} {
     bottom: 10.5rem;

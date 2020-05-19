@@ -1,18 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import device from "../../globalStyles/media-queries"
 
-const rollInLeft = keyframes`
- 00% {
-    transform: translateY(100%);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  
-`
+import { rollInBottom } from "../../utils/animations"
 
 export const SocialContainer = styled.div`
   position: fixed;
@@ -45,7 +34,7 @@ export const SocialContainer = styled.div`
 
   // Animation
 
-  animation: ${rollInLeft} 0.2s ease-in 3s both;
+  animation: ${rollInBottom} 0.5s ease-in 3s both;
 `
 export const Icon = styled.a`
   display: block;

@@ -12,7 +12,11 @@ import {
 } from "./experiments.styles"
 
 const ExperimentsSection = () => (
-  <ExperimentsContainer>
+  <ExperimentsContainer
+    data-sal="slide-up"
+    data-sal-duration="1000"
+    data-sal-easing="easeOutQuart"
+  >
     <Title>Experiments.</Title>
 
     <Experiments>

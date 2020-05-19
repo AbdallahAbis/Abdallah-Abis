@@ -17,9 +17,17 @@ import {
 } from "./work.styles"
 
 const WorkSection = () => (
-  <WorkContainer>
+  <WorkContainer
+    data-sal="slide-up"
+    data-sal-duration="1000"
+    data-sal-easing="easeOutQuart"
+  >
     <Title>Latest Works.</Title>
-    <CardContainer>
+    <CardContainer
+      data-sal="slide-right"
+      data-sal-duration="1000"
+      data-sal-easing="easeOutQuart"
+    >
       <Mask className="mask" />
       <IconsContainer>
         <a href="">
