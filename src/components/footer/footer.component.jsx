@@ -1,7 +1,5 @@
 import React from "react"
 
-import Social from "../social/social.component"
-
 import { FooterContainer, SocialMedia } from "./footer.styles"
 const Footer = () => (
   <>

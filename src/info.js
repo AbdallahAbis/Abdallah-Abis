@@ -56,4 +56,9 @@ module.exports = {
       url: "/#contact",
     },
   ],
+  colors: {
+    white: "#ccd6f6",
+    green: "#4ecca3",
+    background: "#090117",
+  },
 }
