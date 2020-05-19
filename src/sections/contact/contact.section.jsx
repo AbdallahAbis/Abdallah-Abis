@@ -1,12 +1,11 @@
 import React from "react"
 
-import CustomButton from "../../components/customButton/customButton.component"
-
 import {
   ContactContainer,
   SubTitle,
   ContactTitle,
   Paragraph,
+  Button,
 } from "./contact.styles"
 
 const ContactSection = () => (
@@ -20,7 +19,7 @@ const ContactSection = () => (
       back to you.
     </Paragraph>
     <a href="mailto:abis.abdallah@gmail.com">
-      <CustomButton>Send Message</CustomButton>
+      <Button>Send Message</Button>
     </a>
   </ContactContainer>
 )

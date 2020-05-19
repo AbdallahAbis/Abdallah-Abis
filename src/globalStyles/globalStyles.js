@@ -22,17 +22,19 @@ font-size: 42.5%;
 }
 }
 
-body{
-    background: var(--color-tertiary);
-    padding: 0 10rem;
-    font-family: var(--font-primary);
-    font-weight: 400;
-    max-width: 1680px;
-
-      @media ${device.phone} {
-padding: 0 3rem;}
-
+body {
+  background: var(--color-tertiary);
+  padding: 0 10rem;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  max-width: 1680px;
+  position: relative;
+  
+    @media ${device.phone} {
+      padding: 0 3rem;
+    }
 }
+    
 
 a {
   text-decoration: none;
