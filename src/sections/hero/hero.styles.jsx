@@ -23,12 +23,12 @@ export const HeroContainer = styled.div`
   @media ${device.tabLand} {
     padding-top: 20rem;
     padding-left: 10rem;
-    height: ${(window.innerHeight * 0.01 * 100) / 2}px;
+    height: 100vh;
   }
   @media ${device.tabPort} {
     padding: 0;
     justify-content: center;
-    height: ${window.innerHeight * 0.01 * 100}px;
+    height: 100vh;
   }
 `
 export const TitleContainer = styled.div`
