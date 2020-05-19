@@ -1,7 +1,10 @@
 import { createGlobalStyle } from "styled-components"
 import device from "./media-queries"
 
+import Fonts from "../fonts/fonts"
+
 export const GlobalStyles = createGlobalStyle`
+${Fonts}
 
 *, *::after, *::before{
     padding: 0;
