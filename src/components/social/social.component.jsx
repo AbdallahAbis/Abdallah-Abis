@@ -26,8 +26,14 @@ const SVG = ({ name }) => {
 
 const Social = props => (
   <SocialContainer {...props}>
-    {socialMedia.map(({ name, url }) => (
-      <Icon href={url} target="_blank" rel="noopener noreferrer">
+    {socialMedia.map(({ name, url }, i) => (
+      <Icon
+        key={i}
+        aria-label={name}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <SVG name={name} />
       </Icon>
     ))}

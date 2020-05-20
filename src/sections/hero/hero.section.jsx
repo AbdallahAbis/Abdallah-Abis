@@ -32,7 +32,9 @@ const HeroSection = () => (
     >
       Let's Talk
     </Button>
-    <Email href="mailto:abis.abdallah@gmail.com">Abis.Abdallah@gmail.com</Email>
+    <Email aria-label="mail me" href="mailto:abis.abdallah@gmail.com">
+      Abis.Abdallah@gmail.com
+    </Email>
   </HeroContainer>
 )
 

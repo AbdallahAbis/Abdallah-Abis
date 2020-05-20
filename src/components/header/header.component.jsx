@@ -31,8 +31,10 @@ const Header = ({ isOpen, setIsOpen }) => {
     <HeaderContainer className={`${className} ${isOpen}`}>
       <Logo />
       <OptionsContainer className={isOpen}>
-        {navLinks.map(({ name, url }) => (
-          <Option href={url}>{name}</Option>
+        {navLinks.map(({ name, url }, i) => (
+          <Option key={i} aria-label={name} href={url}>
+            {name}
+          </Option>
         ))}
       </OptionsContainer>
       <HamburgerMenu setIsOpen={setIsOpen} />
