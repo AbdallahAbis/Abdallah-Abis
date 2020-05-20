@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import Title from "../../components/title/title.component"
 import CustomButton from "../../components/customButton/customButton.component"
@@ -14,7 +15,7 @@ import {
 
 const ExperimentsSection = ({ ExperimentsData }) => (
   <ExperimentsContainer
-  id='experiments'
+    id="experiments"
     data-sal="slide-up"
     data-sal-duration="1000"
     data-sal-easing="easeOutQuart"
@@ -53,5 +54,8 @@ const ExperimentsSection = ({ ExperimentsData }) => (
     {ExperimentsData.length > 4 && <CustomButton>See More</CustomButton>}
   </ExperimentsContainer>
 )
+ExperimentsSection.propTypes = {
+  ExperimentsData: PropTypes.array.isRequired,
+}
 
 export default ExperimentsSection

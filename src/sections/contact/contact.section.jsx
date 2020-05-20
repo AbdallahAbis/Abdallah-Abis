@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import info from "../../info"
 
 import {
@@ -17,7 +18,7 @@ const ContactSection = ({ ContactData }) => {
 
   return (
     <ContactContainer
-    id='contact'
+      id="contact"
       data-sal="zoom-in"
       data-sal-duration="1000"
       data-sal-easing="easeOutQuart"
@@ -30,6 +31,10 @@ const ContactSection = ({ ContactData }) => {
       </a>
     </ContactContainer>
   )
+}
+
+ContactSection.propTypes = {
+  ContactData: PropTypes.array.isRequired,
 }
 
 export default ContactSection
