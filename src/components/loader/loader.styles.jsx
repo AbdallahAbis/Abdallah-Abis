@@ -32,6 +32,8 @@ export const OuterContainer = styled.div`
   align-items: center;
   justify-content: center;
   background: var(--color-tertiary);
+
+  display: ${({ loaded }) => (loaded ? "none" : "block")};
 `
 export const LoaderContainer = styled.div`
   display: flex;
