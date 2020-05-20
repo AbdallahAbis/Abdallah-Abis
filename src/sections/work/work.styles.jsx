@@ -82,7 +82,7 @@ export const Image = styled(Img)`
   left: 0;
   width: 100%;
   z-index: -1;
-  height: auto;
+  height: 100%;
 `
 
 export const Mask = styled.div`
