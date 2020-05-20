@@ -10,8 +10,6 @@ import ContactSection from "../sections/contact/contact.section"
 import "../globalStyles/index.css"
 
 const IndexPage = ({ data }) => {
-  console.log(data)
-
   return (
     <Layout>
       <HeroSection />

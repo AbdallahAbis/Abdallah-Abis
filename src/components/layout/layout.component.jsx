@@ -8,7 +8,6 @@ import MenuContext from "../../contexts/hamburgerMenu.context"
 
 import { GlobalStyles } from "../../globalStyles/globalStyles"
 
-import Loader from "../loader/loader.component"
 import Header from "../header/header.component"
 import Email from "../email/email.component"
 import Footer from "../footer/footer.component"
@@ -43,20 +42,12 @@ const Layout = ({ children }) => {
         <div id="root">
           <Head metadata={site.siteMetadata} />
           <MenuContext.Provider value={isOpen}>
-            <>
-              <GlobalStyles isOpen={isOpen} />
-              {count !== 0 ? (
-                <Loader />
-              ) : (
-                <>
-                  <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-                  {children}
-                  <Email />
-                  <SocialMedia />
-                  <Footer />
-                </>
-              )}
-            </>
+            <GlobalStyles isOpen={isOpen} />
+            <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+            {children}
+            <Email />
+            <SocialMedia />
+            <Footer />
           </MenuContext.Provider>
         </div>
       )}
