@@ -10,25 +10,48 @@ import ContactSection from "../sections/contact/contact.section"
 
 import "../globalStyles/index.css"
 
-const IndexPage = ({ data }) => {
-  console.log(data.allMarkdownRemark.edges)
-
-  return (
-    <Layout>
-      <HeroSection />
-      <AboutSection />
-      <WorkSection work={data.allMarkdownRemark.edges} />
-      <ExperimentsSection />
-      <ContactSection />
-    </Layout>
-  )
-}
+const IndexPage = ({ data }) => (
+  <Layout>
+    <HeroSection HeroData={data.Hero.edges} />
+    <AboutSection AboutData={data.About.edges} />
+    <WorkSection WorkData={data.Work.edges} />
+    <ExperimentsSection ExperimentsData={data.Experiments.edges} />
+    <ContactSection ContactData={data.Contact.edges} />
+  </Layout>
+)
 
 export default IndexPage
 
 export const IndexQuery = graphql`
   {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/work/" } }) {
+    Hero: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/hero/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            slogan
+            buttonText
+          }
+          html
+        }
+      }
+    }
+    About: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            skills
+          }
+          html
+        }
+      }
+    }
+    Work: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/work/" } }) {
       edges {
         node {
           frontmatter {
@@ -44,7 +67,38 @@ export const IndexQuery = graphql`
               }
             }
           }
-          htmlAst
+          html
+        }
+      }
+    }
+
+    Experiments: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experiments/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            link
+            image {
+              publicURL
+            }
+          }
+        }
+      }
+    }
+
+    Contact: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/contact/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            subtitle
+            title
+            buttonText
+          }
+          html
         }
       }
     }

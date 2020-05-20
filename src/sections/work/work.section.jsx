@@ -17,7 +17,8 @@ import {
   // Button,
 } from "./work.styles"
 
-const WorkSection = ({ work }) => {
+const WorkSection = ({ WorkData }) => {
+  console.log(WorkData)
   return (
     <WorkContainer>
       <Title
@@ -27,7 +28,7 @@ const WorkSection = ({ work }) => {
       >
         Latest Works.
       </Title>
-      {work.map(
+      {WorkData.map(
         (
           {
             node: {
@@ -40,7 +41,7 @@ const WorkSection = ({ work }) => {
                   childImageSharp: { fluid },
                 },
               },
-              htmlAst,
+              html,
             },
           },
           i
@@ -72,9 +73,10 @@ const WorkSection = ({ work }) => {
               </a>
             </IconsContainer>
             <WorkTitle id="title">{title}</WorkTitle>
-            <Paragraph id="paragraph">
-              {htmlAst.children[0].children[0].value}
-            </Paragraph>
+            <Paragraph
+              id="paragraph"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
 
             <TechnologiesContainer id="tech">
               {technologies.map((tech, i) => (

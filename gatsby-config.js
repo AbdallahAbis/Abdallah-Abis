@@ -11,8 +11,37 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `Hero`,
+        path: `${__dirname}/content/hero`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `About`,
+        path: `${__dirname}/content/about`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `work`,
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/work`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Experiments`,
+        path: `${__dirname}/content/experiments`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Contact`,
+        path: `${__dirname}/content/contact`,
       },
     },
     `gatsby-transformer-sharp`,

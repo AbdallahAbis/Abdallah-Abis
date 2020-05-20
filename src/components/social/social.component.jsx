@@ -10,8 +10,8 @@ import Instagram from "../../assets/icons/instagram.inline.svg"
 
 import { SocialContainer, Icon } from "./social.styles"
 
-const SVG = ({ name }) => {
-  return name === "LinkedIn" ? (
+const SVG = ({ name }) => (
+  name === "LinkedIn" ? (
     <LinkedIn />
   ) : name === "CodePen" ? (
     <CodePen />
@@ -22,7 +22,7 @@ const SVG = ({ name }) => {
   ) : (
     <Github />
   )
-}
+)
 
 const Social = props => (
   <SocialContainer {...props}>

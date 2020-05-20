@@ -11,9 +11,8 @@ import {
   ExperimentTitle,
   Image,
 } from "./experiments.styles"
-import EXPERIMENT_DATA from "./data"
 
-const ExperimentsSection = () => (
+const ExperimentsSection = ({ ExperimentsData }) => (
   <ExperimentsContainer
     data-sal="slide-up"
     data-sal-duration="1000"
@@ -22,22 +21,35 @@ const ExperimentsSection = () => (
     <Title>Experiments.</Title>
 
     <Experiments>
-      {EXPERIMENT_DATA.map(({ title, imgUrl, link }, i) => (
-        <Experiment key={i}>
-          <a
-            aria-label={title}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <CodePen />
-          </a>
-          <Image img={imgUrl} />
-          <ExperimentTitle>{title}</ExperimentTitle>
-        </Experiment>
-      ))}
+      {ExperimentsData.map(
+        (
+          {
+            node: {
+              frontmatter: {
+                title,
+                link,
+                image: { publicURL },
+              },
+            },
+          },
+          i
+        ) => (
+          <Experiment key={i}>
+            <a
+              aria-label={title}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CodePen />
+            </a>
+            <Image img={publicURL} />
+            <ExperimentTitle>{title}</ExperimentTitle>
+          </Experiment>
+        )
+      )}
     </Experiments>
-    {EXPERIMENT_DATA.length > 4 && <CustomButton>See More</CustomButton>}
+    {ExperimentsData.length > 4 && <CustomButton>See More</CustomButton>}
   </ExperimentsContainer>
 )
 
