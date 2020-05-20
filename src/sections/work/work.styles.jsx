@@ -159,7 +159,7 @@ export const WorkTitle = styled.h3`
   }
 `
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;

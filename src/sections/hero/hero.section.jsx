@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import info from "../../info"
 
 import {
@@ -16,6 +17,8 @@ const HeroSection = ({ HeroData }) => {
     frontmatter: { name, slogan, buttonText },
     html,
   } = HeroData[0].node
+  console.log(html)
+
   return (
     <HeroContainer>
       <TitleContainer>
@@ -23,10 +26,10 @@ const HeroSection = ({ HeroData }) => {
         <Slogan>{slogan}</Slogan>
       </TitleContainer>
       <Paragraph
+        dangerouslySetInnerHTML={{ __html: html }}
         data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-easing="ease-out-back"
-        dangerouslySetInnerHTML={{ __html: html }}
       />
       <Button
         data-sal="slide-up"
@@ -40,6 +43,10 @@ const HeroSection = ({ HeroData }) => {
       </Email>
     </HeroContainer>
   )
+}
+
+HeroSection.propTypes = {
+  HeroData: PropTypes.array.isRequired,
 }
 
 export default HeroSection
