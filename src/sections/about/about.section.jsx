@@ -13,6 +13,7 @@ const AboutSection = ({ AboutData }) => {
   const { title } = AboutData[0].node.frontmatter
   return (
     <AboutContainer
+    id='about'
       data-sal="slide-up"
       data-sal-duration="1000"
       data-sal-easing="easeOutQuart"
