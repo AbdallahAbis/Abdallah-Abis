@@ -11,12 +11,57 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/assets/images`,
+        name: `Hero`,
+        path: `${__dirname}/content/hero`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `About`,
+        path: `${__dirname}/content/about`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `work`,
+        path: `${__dirname}/content/work`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Experiments`,
+        path: `${__dirname}/content/experiments`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Contact`,
+        path: `${__dirname}/content/contact`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 864,
+              linkImagesToOriginal: true,
+              quality: 90,
+              tracedSVG: { color: info.colors.background },
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,7 +71,7 @@ module.exports = {
         background_color: `#090117`,
         theme_color: `#090117`,
         display: `minimal-ui`,
-        icon: `src/assets/icons/siteIcons/icon.png`, 
+        icon: `src/assets/icons/siteIcons/icon.png`,
       },
     },
     {

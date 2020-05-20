@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Img from "gatsby-image"
 import device from "../../globalStyles/media-queries"
 
 import CustomButton from "../../components/customButton/customButton.component"
@@ -20,8 +21,6 @@ export const WorkContainer = styled.div`
 export const CardContainer = styled.div`
   width: 80%;
   height: 45rem;
-  background: ${({ img }) => `url(${img})`};
-  background-size: cover;
   border: 3px solid var(--color-quaternary);
   border-radius: 5px;
   overflow: hidden;
@@ -41,28 +40,28 @@ export const CardContainer = styled.div`
   }
 
   @media (pointer: fine) {
-    &:hover > * {
-      &:nth-child(1) {
+    &:hover {
+      #mask {
         clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
         transform: translateX(60%);
       }
-      &:nth-child(2) {
-        // transform: translateX(-200%);
+
+      #icons {
         transition: all 0.2s;
       }
-      &:nth-child(3) {
+      #title {
         transform: translateX(150%);
         transition: all 0.2s;
       }
-      &:nth-child(4) {
+      #paragraph {
         transform: translate(150%, -50%);
         transition: all 0.2s;
       }
-      &:nth-child(5) {
+      #tech {
         transform: translateX(250%);
         transition: all 0.2s;
       }
-      &:nth-child(6) {
+      #button {
         transform: translateY(0);
         transition: all 0.2s 0.2s;
       }
@@ -75,6 +74,15 @@ export const CardContainer = styled.div`
   @media ${device.phone} {
     height: 65rem;
   }
+`
+
+export const Image = styled(Img)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: auto;
 `
 
 export const Mask = styled.div`
@@ -124,6 +132,7 @@ export const NewWindow = styled(NewSVG)`
 export const WorkTitle = styled.h3`
   font-family: var(--font-secondary);
   font-size: 2rem;
+  font-weight: 300;
   color: var(--color-primary);
 
   position: absolute;

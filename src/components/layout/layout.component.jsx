@@ -16,15 +16,11 @@ import { SocialMedia } from "./layout.styles"
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [count, setCount] = useState(1000)
 
   React.useEffect(() => {
     sal()
   })
 
-  setTimeout(function () {
-    setCount(0)
-  }, 2000)
   return (
     <StaticQuery
       query={graphql`
