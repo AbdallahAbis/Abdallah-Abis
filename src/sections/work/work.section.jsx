@@ -29,6 +29,7 @@ const WorkSection = () => (
     {WORK_DATA.map(
       ({ title, shortDescription, technologies, github, link, imgUrl }, i) => (
         <CardContainer
+          key={i}
           data-sal="slide-right"
           data-sal-duration="1000"
           data-sal-easing="easeOutQuart"
@@ -36,10 +37,20 @@ const WorkSection = () => (
         >
           <Mask className="mask" />
           <IconsContainer>
-            <a href={github} target="_blank" rel="noopener noreferrer">
+            <a
+              aria-label="view on github"
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github />
             </a>
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a
+              aria-label="check the demo"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <NewWindow />
             </a>
           </IconsContainer>

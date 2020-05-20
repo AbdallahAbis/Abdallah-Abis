@@ -22,7 +22,7 @@ const ContactSection = () => (
       employee, otherwise, if you just want to say hi, I will definitely say Hi
       back to you.
     </Paragraph>
-    <a href="mailto:abis.abdallah@gmail.com">
+    <a aria-label='mail to me' href="mailto:abis.abdallah@gmail.com">
       <Button>Send Message</Button>
     </a>
   </ContactContainer>

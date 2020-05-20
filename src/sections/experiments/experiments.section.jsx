@@ -22,9 +22,14 @@ const ExperimentsSection = () => (
     <Title>Experiments.</Title>
 
     <Experiments>
-      {EXPERIMENT_DATA.map(({ title, imgUrl, link }) => (
-        <Experiment>
-          <a href={link} target="_blank" rel="noopener noreferrer">
+      {EXPERIMENT_DATA.map(({ title, imgUrl, link }, i) => (
+        <Experiment key={i}>
+          <a
+            aria-label={title}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <CodePen />
           </a>
           <Image img={imgUrl} />

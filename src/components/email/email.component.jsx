@@ -6,7 +6,9 @@ import { EmailContainer, EmailAddress } from "./email.styles"
 
 const Email = () => (
   <EmailContainer>
-    <EmailAddress href={`mailto:${email}`}>{email}</EmailAddress>
+    <EmailAddress aria-label='mail to me' href={`mailto:${email}`}>
+      {email}
+    </EmailAddress>
   </EmailContainer>
 )
 
