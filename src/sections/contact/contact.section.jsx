@@ -1,4 +1,5 @@
 import React from "react"
+import info from "../../info"
 
 import {
   ContactContainer,
@@ -9,8 +10,6 @@ import {
 } from "./contact.styles"
 
 const ContactSection = ({ ContactData }) => {
-  console.log(ContactData)
-
   const {
     frontmatter: { subtitle, title, buttonText },
     html,
@@ -25,7 +24,7 @@ const ContactSection = ({ ContactData }) => {
       <SubTitle>{subtitle}</SubTitle>
       <ContactTitle>{title}</ContactTitle>
       <Paragraph dangerouslySetInnerHTML={{ __html: html }} />
-      <a aria-label="mail to me" href="mailto:abis.abdallah@gmail.com">
+      <a aria-label="mail to me" href={`mailto:${info.email}`}>
         <Button>{buttonText}</Button>
       </a>
     </ContactContainer>

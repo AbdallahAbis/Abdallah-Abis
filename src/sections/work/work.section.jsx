@@ -18,7 +18,6 @@ import {
 } from "./work.styles"
 
 const WorkSection = ({ WorkData }) => {
-  console.log(WorkData)
   return (
     <WorkContainer>
       <Title

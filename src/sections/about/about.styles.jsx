@@ -27,7 +27,7 @@ export const AboutContainer = styled.div`
     grid-gap: 5rem;
   }
 `
-export const Paragraph = styled.p`
+export const Paragraph = styled.div`
   grid-column: 1;
   grid-row: 2;
 

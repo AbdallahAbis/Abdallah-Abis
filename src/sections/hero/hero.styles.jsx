@@ -67,7 +67,7 @@ export const Slogan = styled.h2`
   // Animation
   animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
-export const Paragraph = styled.p`
+export const Paragraph = styled.div`
   font-size: 1.8rem;
   width: 50%;
   margin-bottom: 14rem;
