@@ -24,9 +24,7 @@ export default IndexPage
 
 export const IndexQuery = graphql`
   {
-    Hero: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/hero/" } }
-    ) {
+    Hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
       edges {
         node {
           frontmatter {
@@ -61,8 +59,12 @@ export const IndexQuery = graphql`
             technologies
             image {
               childImageSharp {
-                fluid(maxWidth: 864, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                fluid(
+                  maxWidth: 864
+                  quality: 80
+                  traceSVG: { color: "#0a192f" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

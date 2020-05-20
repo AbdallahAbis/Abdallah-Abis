@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
   justify-content: center;
 
   font-family: var(--font-secondary);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--color-primary);
   background: var(--color-tertiary);
   z-index: 1000;
