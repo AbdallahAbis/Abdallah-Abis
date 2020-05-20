@@ -20,7 +20,7 @@ const HeroSection = ({ HeroData }) => {
   console.log(html)
 
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <TitleContainer>
         <Title>{name}</Title>
         <Slogan>{slogan}</Slogan>

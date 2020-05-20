@@ -19,7 +19,7 @@ import {
 
 const WorkSection = ({ WorkData }) => {
   return (
-    <WorkContainer>
+    <WorkContainer id="work">
       <Title
         data-sal="slide-up"
         data-sal-duration="1000"

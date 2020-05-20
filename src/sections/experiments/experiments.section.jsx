@@ -14,6 +14,7 @@ import {
 
 const ExperimentsSection = ({ ExperimentsData }) => (
   <ExperimentsContainer
+  id='experiments'
     data-sal="slide-up"
     data-sal-duration="1000"
     data-sal-easing="easeOutQuart"

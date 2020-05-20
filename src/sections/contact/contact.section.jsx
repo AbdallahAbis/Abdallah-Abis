@@ -17,6 +17,7 @@ const ContactSection = ({ ContactData }) => {
 
   return (
     <ContactContainer
+    id='contact'
       data-sal="zoom-in"
       data-sal-duration="1000"
       data-sal-easing="easeOutQuart"
