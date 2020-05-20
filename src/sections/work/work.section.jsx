@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import Title from "../../components/title/title.component"
 
@@ -89,6 +90,10 @@ const WorkSection = ({ WorkData }) => {
       )}
     </WorkContainer>
   )
+}
+
+WorkSection.propTypes = {
+  WorkData: PropTypes.array.isRequired,
 }
 
 export default WorkSection

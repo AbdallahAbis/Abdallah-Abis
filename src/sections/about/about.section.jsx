@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 import Title from "../../components/title/title.component"
 
@@ -13,7 +14,7 @@ const AboutSection = ({ AboutData }) => {
   const { title } = AboutData[0].node.frontmatter
   return (
     <AboutContainer
-    id='about'
+      id="about"
       data-sal="slide-up"
       data-sal-duration="1000"
       data-sal-easing="easeOutQuart"
@@ -31,6 +32,10 @@ const AboutSection = ({ AboutData }) => {
       ))}
     </AboutContainer>
   )
+}
+
+AboutSection.propTypes = {
+  AboutData: PropTypes.array.isRequired,
 }
 
 export default AboutSection

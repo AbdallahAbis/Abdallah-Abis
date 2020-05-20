@@ -1,5 +1,7 @@
 import React, { useState } from "react"
+import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+
 import sal from "sal.js"
 import "sal.js/dist/sal.css"
 
@@ -49,6 +51,10 @@ const Layout = ({ children }) => {
       )}
     />
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

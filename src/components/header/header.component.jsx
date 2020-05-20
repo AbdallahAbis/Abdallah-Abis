@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import PropTypes from "prop-types"
 
 import { navLinks } from "../../info"
 
@@ -40,6 +41,11 @@ const Header = ({ isOpen, setIsOpen }) => {
       <HamburgerMenu setIsOpen={setIsOpen} />
     </HeaderContainer>
   )
+}
+
+Header.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
 }
 
 export default Header
