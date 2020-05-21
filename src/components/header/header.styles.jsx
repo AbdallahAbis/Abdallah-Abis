@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   display: flex;
 
   width: 100%;
-  padding: 2rem 10rem;
+  padding: 2rem 5rem;
 
   transition: 0.2s;
 

@@ -6,7 +6,7 @@ import Social from "../social/social.component"
 
 export const SocialMedia = styled(Social)`
   position: fixed;
-  right: 10rem;
+  right: 5rem;
   bottom: 20%;
 
   animation: ${rollInBottom} 0.5s ease-in 3s both;
