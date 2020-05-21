@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://abisabdallah.com">
-    <img alt="Abis" src="./src/assets/icons/logo.inline.svg" width="60" />
+    <img alt="Abis" src="./src/assets/images/logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
