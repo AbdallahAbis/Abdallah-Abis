@@ -146,7 +146,7 @@ export const NewWindow = styled(NewSVG)`
 export const WorkTitle = styled.h3`
   font-family: var(--font-secondary);
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
 
   position: absolute;
   top: 3.5rem;

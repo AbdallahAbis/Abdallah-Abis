@@ -6,7 +6,7 @@ import { rollInBottom } from "../../utils/animations"
 export const EmailContainer = styled.div`
   position: fixed;
   bottom: 20%;
-  left: 10rem;
+  left: 5rem;
 
   display: flex;
 

@@ -1,18 +1,18 @@
 <p align="center">
   <a href="https://abisabdallah.com">
-    <img alt="Abis" src="https://raw.githubusercontent.com/AbdallahAbis/Abdallah-Abis/src/assets/icons/logo.inline.svg" width="60" />
+    <img alt="Abis" src="./src/assets/images/logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
 Abis's First Portfolio</h1>
 
-<p>This Portfolio was designed and developed by <a href='' target="_blank">Abdallah Abis</a>  </p>
+<p>This Portfolio was designed and developed by <a href='https://twitter.com/Dev_abis' target="_blank">Abdallah Abis</a> using <a href='https://www.gatsbyjs.org/' target="_blank">GatsbyJS</a> and hosted on <a href='https://www.netlify.com/' target="_blank">Netlify</a>, the design was inspired by <a href='https://github.com/bchiang7' target="_blank">Brittany Chiang</a>, I hope you like it.</p>
 
-![demo](https://raw.githubusercontent.com/AbdallahAbis/Abdallah-Abis/src/assets/images/website.webp)
+![demo](./src/assets/images/website.webp)
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## Fork it, BUT please mention me.
 
-## 🚀 Quick start
+
 
 1.  **Create a Gatsby site.**
 

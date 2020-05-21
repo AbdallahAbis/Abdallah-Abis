@@ -31,6 +31,8 @@ const HeroSection = ({ HeroData }) => {
         data-sal-easing="ease-out-back"
       />
       <Button
+        href="/#about"
+        aria-label="check my skills"
         data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-easing="ease-out-back"
