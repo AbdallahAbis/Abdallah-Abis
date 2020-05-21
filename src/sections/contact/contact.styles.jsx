@@ -3,13 +3,15 @@ import device from "../../globalStyles/media-queries"
 import CustomButton from "../../components/customButton/customButton.component"
 
 export const ContactContainer = styled.div`
-  width: 40%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  width: 40%;
+  margin: 0 auto;
 
   color: var(--color-primary);
+
+  align-items: center;
 
   @media ${device.tabLand} {
     width: 80%;
@@ -22,10 +24,12 @@ export const ContactContainer = styled.div`
   }
 `
 export const SubTitle = styled.div`
-  color: var(--color-secondary);
   font-family: var(--font-secondary);
   font-size: 1.6rem;
+
   margin-bottom: 1rem;
+
+  color: var(--color-secondary);
 `
 export const ContactTitle = styled.div`
   font-weight: bold;
@@ -38,7 +42,9 @@ export const ContactTitle = styled.div`
 export const Paragraph = styled.div`
   font-size: 1.6rem;
   line-height: 30px;
+
   margin: 3rem 0 7rem 0;
+
   text-align: center;
 `
 

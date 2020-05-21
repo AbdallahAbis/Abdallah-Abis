@@ -8,8 +8,6 @@ import WorkSection from "../sections/work/work.section"
 import ExperimentsSection from "../sections/experiments/experiments.section"
 import ContactSection from "../sections/contact/contact.section"
 
-import "../globalStyles/index.css"
-
 const IndexPage = ({ data }) => (
   <Layout>
     <HeroSection HeroData={data.Hero.edges} />

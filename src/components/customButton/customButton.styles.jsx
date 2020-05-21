@@ -2,14 +2,17 @@ import styled from "styled-components"
 import device from "../../globalStyles/media-queries"
 
 export const Button = styled.button`
-  font-size: 1.5rem;
   font-family: var(--font-secondary);
-  color: var(--color-secondary);
-  background: transparent;
+  font-size: 1.5rem;
+
   padding: 1.5rem 2rem;
+
+  cursor: pointer;
+
+  color: var(--color-secondary);
   border: 1px solid currentColor;
   border-radius: 5px;
-  cursor: pointer;
+  background: transparent;
 
   @media ${device.laptop} {
     padding: 1.5rem 2rem;
@@ -17,6 +20,7 @@ export const Button = styled.button`
 
   @media ${device.phone} {
     font-size: 1.8rem;
+
     padding: 2rem 2.4rem;
   }
 

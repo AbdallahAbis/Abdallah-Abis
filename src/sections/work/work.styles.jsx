@@ -8,24 +8,27 @@ import GithubSVG from "../../assets/icons/github.inline.svg"
 import NewSVG from "../../assets/icons/new-window.inline.svg"
 
 export const WorkContainer = styled.div`
-  padding: 0 20rem;
   margin-bottom: 15rem;
+  padding: 0 20rem;
 
   @media ${device.tabLand} {
     padding: 10rem;
   }
+
   @media ${device.tabPort} {
     padding: 0;
   }
 `
 export const CardContainer = styled.div`
-  width: 80%;
-  height: 45rem;
-  border: 3px solid var(--color-quaternary);
-  border-radius: 5px;
+  position: relative;
+
   overflow: hidden;
 
-  position: relative;
+  width: 80%;
+  height: 45rem;
+
+  border: 3px solid var(--color-quaternary);
+  border-radius: 5px;
 
   &:first-of-type {
     margin-top: 10rem;
@@ -71,6 +74,7 @@ export const CardContainer = styled.div`
   @media ${device.tabLand} {
     width: 100%;
   }
+
   @media ${device.phone} {
     height: 65rem;
   }
@@ -78,62 +82,70 @@ export const CardContainer = styled.div`
 
 export const Image = styled(Img)`
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
+
   width: 100%;
-  z-index: -1;
   height: 100%;
 `
 
 export const Mask = styled.div`
-  height: 100%;
-  width: 100%;
-  background: rgba(10, 25, 47, 0.95);
-
   position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
-  z-index: 0;
+
+  width: 100%;
+  height: 100%;
 
   transition: all 0.2s;
+
+  background: rgba(10, 25, 47, 0.95);
 `
 export const IconsContainer = styled.div`
-  height: 10rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
   position: absolute;
   top: 50%;
   right: 1.5rem;
-  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  height: 10rem;
+
   transition: all 0.2s 0.2s;
+  transform: translateY(-50%);
+
+  align-items: center;
+  justify-content: space-between;
 
   @media ${device.tabLand} {
     top: 1.5rem;
     left: 3.5rem;
-    transform: none;
-    height: auto;
-    width: 7rem;
+
     flex-direction: row;
+
+    width: 7rem;
+    height: auto;
+
+    transform: none;
   }
 `
 
 export const Github = styled(GithubSVG)`
   height: 2.5rem;
+
   fill: var(--color-primary);
 `
 export const NewWindow = styled(NewSVG)`
   height: 2.5rem;
+
   fill: var(--color-primary);
 `
 export const WorkTitle = styled.h3`
   font-family: var(--font-secondary);
   font-size: 2rem;
   font-weight: 300;
-  color: var(--color-primary);
 
   position: absolute;
   top: 3.5rem;
@@ -141,16 +153,21 @@ export const WorkTitle = styled.h3`
 
   transition: all 0.2s 0.2s;
 
+  color: var(--color-primary);
+
   &:before {
     content: "";
-    width: 10px;
-    height: 10px;
-    background: var(--color-secondary);
 
     position: absolute;
     top: 50%;
     left: -10px;
+
+    width: 10px;
+    height: 10px;
+
     transform: translate(-100%, -50%);
+
+    background: var(--color-secondary);
   }
 
   @media ${device.phone} {
@@ -160,58 +177,72 @@ export const WorkTitle = styled.h3`
 `
 
 export const Paragraph = styled.div`
+  font-size: 1.6rem;
+  line-height: 30px;
+
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
-  font-size: 1.6rem;
-  line-height: 30px;
-  color: var(--color-primary);
   width: 70%;
 
   transition: all 0.2s;
+  transform: translate(-50%, -50%);
+
+  color: var(--color-primary);
 
   @media ${device.phone} {
-    width: 90%;
-    top: 40%;
     font-size: 1.8rem;
+
+    top: 40%;
+
+    width: 90%;
   }
 `
 export const TechnologiesContainer = styled.div`
+  font-size: 1.3rem;
+
   position: absolute;
   bottom: 3.5rem;
   left: 5.5rem;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
-  grid-gap: 2rem;
+
   width: 70%;
-  font-size: 1.3rem;
-  color: var(--color-primary);
 
   transition: all 0.2s;
 
+  color: var(--color-primary);
+
+  grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
+  grid-gap: 2rem;
+
   @media ${device.phone} {
+    font-size: 1.6rem;
+
     bottom: 10.5rem;
     left: 3.5rem;
-    font-size: 1.6rem;
+
     width: 90%;
   }
 `
 
 export const Technology = styled.p`
   position: relative;
+
   &:before {
     content: "";
-    height: 0.5rem;
-    width: 0.5rem;
-    background: var(--color-secondary);
 
     position: absolute;
     top: 50%;
     left: 0;
+
+    width: 0.5rem;
+    height: 0.5rem;
+
     transform: translate(-1rem, -50%);
+
+    background: var(--color-secondary);
   }
 `
 export const Button = styled(CustomButton)`

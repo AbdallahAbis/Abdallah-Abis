@@ -6,27 +6,29 @@ import Social from "../social/social.component"
 
 export const SocialMedia = styled(Social)`
   position: fixed;
-  bottom: 20%;
   right: 10rem;
+  bottom: 20%;
+
+  animation: ${rollInBottom} 0.5s ease-in 3s both;
 
   &::after {
     content: "";
+
+    position: absolute;
+    bottom: -30rem;
+    left: 50%;
+
     width: 0.5px;
     height: 30rem;
-    background: var(--color-secondary);
-    position: absolute;
-    left: 50%;
-    bottom: -30rem;
-    transform: translate(-50%);
+
     transition: all 0.5s;
+    transform: translate(-50%);
     pointer-events: none;
+
+    background: var(--color-secondary);
   }
 
   @media ${device.tabPort} {
     display: none;
   }
-
-  // Animation
-
-  animation: ${rollInBottom} 0.5s ease-in 3s both;
 `
