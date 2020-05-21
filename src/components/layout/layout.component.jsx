@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -7,6 +7,7 @@ import "sal.js/dist/sal.css"
 
 import Head from "../../utils/head"
 import MenuContext from "../../contexts/hamburgerMenu.context"
+import ScrollToTop from "../../utils/scrollTop"
 
 import { GlobalStyles } from "../../globalStyles/globalStyles"
 
@@ -19,8 +20,9 @@ import { SocialMedia } from "./layout.styles"
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     sal()
+    window.scrollTo(0, 0)
   })
 
   return (

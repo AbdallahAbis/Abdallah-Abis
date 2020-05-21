@@ -1434,6 +1434,24 @@
     lodash.debounce "^4.0.8"
     react-dev-utils "^9.1.0"
 
+"@prefresh/core@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@prefresh/core/-/core-0.6.0.tgz#b7801ad3d16de9d21ed0824db6c85707f93cf93c"
+  integrity sha512-xhhBgQeMmyoSYEr8F27oypxRTWysIKPnc+Ed6U5OmEwPtLeKsccI3UCpSQyrcv5/HmPNPjAYHPqNC0uH57rIkw==
+
+"@prefresh/utils@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@prefresh/utils/-/utils-0.1.0.tgz#9b69c9ecd6002e72e096e5e72f4bd4f88d15284c"
+  integrity sha512-xtUsQMJIHwBuiXu1E1iiXNVfn60N6zpVUo67ZvQVA6OMlslQzWtbdnTXRT+iplBBgfLmQvXR0bKsNz1+ZYSMgw==
+
+"@prefresh/webpack@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@prefresh/webpack/-/webpack-0.6.0.tgz#fec281c8b94e5455646686eb4c123a7b22004dd3"
+  integrity sha512-z9S1jknJZsc9xmMsX/3nNae8CxKavlOH0YydDjdld41WYB4A2UkC7+rl4P+XH7www9HpGcXzmqgDfFKGGJnNEg==
+  dependencies:
+    "@prefresh/core" "0.6.0"
+    "@prefresh/utils" "0.1.0"
+
 "@reach/router@^1.3.3":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.3.3.tgz#58162860dce6c9449d49be86b0561b5ef46d80db"
@@ -5965,6 +5983,14 @@ gatsby-plugin-page-creator@^2.3.1:
     glob "^7.1.6"
     lodash "^4.17.15"
     micromatch "^3.1.10"
+
+gatsby-plugin-preact@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-4.0.0.tgz#fac323a20162ae4ecf80412e508be27f007435c6"
+  integrity sha512-QvntARJf340Yiq6jLaJW0GHL5KSJRRvRzPBZODTNTfk47nkPodSCGzcNr8cH9ek4yAm4iLLuDhJWG9nijixivA==
+  dependencies:
+    "@prefresh/webpack" "^0.6.0"
+    react-refresh "^0.8.2"
 
 gatsby-plugin-react-helmet@^3.3.1:
   version "3.3.1"
@@ -10820,6 +10846,11 @@ potrace@^2.1.6:
   dependencies:
     jimp "^0.10.2"
 
+preact@^10.4.4:
+  version "10.4.4"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.4.4.tgz#0bd6d759ec2f8684aaf8c63c7f076191e46528cf"
+  integrity sha512-EaTJrerceyAPatQ+vfnadoopsMBZAOY7ak9ogVdUi5xbpR8SoHgtLryXnW+4mQOwt21icqoVR1brkU2dq7pEBA==
+
 prebuild-install@^5.3.3:
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.3.3.tgz#ef4052baac60d465f5ba6bf003c9c1de79b9da8e"
@@ -11303,6 +11334,11 @@ react-refresh@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.7.2.tgz#f30978d21eb8cac6e2f2fde056a7d04f6844dd50"
   integrity sha512-u5l7fhAJXecWUJzVxzMRU2Zvw8m4QmDNHlTrT5uo3KBlYBhmChd7syAakBoay1yIiVhx/8Fi7a6v6kQZfsw81Q==
+
+react-refresh@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.2.tgz#24bb0858eac92b0d7b0dd561747f0c9fd6c60327"
+  integrity sha512-n8GXxo3DwM2KtFEL69DAVhGc4A1THn2qjmfvSo3nze0NLCoPbywazeJPqdp0RdSGLmyhQzeyA+XPXOobbYlkzg==
 
 react-side-effect@^2.1.0:
   version "2.1.0"
