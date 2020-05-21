@@ -21,6 +21,8 @@ const Layout = ({ children }) => {
 
   React.useEffect(() => {
     sal()
+        window.scrollTo(0, 0)
+
   })
 
   return (
