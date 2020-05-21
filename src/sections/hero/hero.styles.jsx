@@ -59,6 +59,7 @@ export const Title = styled.h1`
 export const Slogan = styled.h2`
   font-family: var(--font-secondary);
   font-size: 2.4rem;
+  font-weight: 400;
 
   color: var(--color-secondary);
 
