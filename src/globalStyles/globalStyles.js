@@ -41,6 +41,7 @@ body {
   background: var(--color-tertiary);
 
   overflow: ${({ isOpen }) => (isOpen ? "hidden" : "scroll")};
+  overflow-x: hidden;
   
   @media ${device.phone} {
     padding: 0 3rem;
