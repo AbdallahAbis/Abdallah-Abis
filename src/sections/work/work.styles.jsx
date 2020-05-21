@@ -88,7 +88,7 @@ export const Image = styled(Img)`
 
   width: 100%;
   min-height: 100%;
-  height:auto;
+  height: auto;
 `
 
 export const Mask = styled.div`
@@ -207,16 +207,23 @@ export const TechnologiesContainer = styled.div`
   bottom: 3.5rem;
   left: 5.5rem;
 
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
 
-  width: 70%;
+  width: 60%;
 
   transition: all 0.2s;
 
   color: var(--color-primary);
 
-  grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
-  grid-gap: 2rem;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 5rem;
+      margin-bottom: 1rem;
+    }
+  }
 
   @media ${device.phone} {
     font-size: 1.6rem;
