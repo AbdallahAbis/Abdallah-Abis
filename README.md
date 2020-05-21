@@ -15,10 +15,13 @@ Abdallah Abis</h1>
 
 <p>This Portfolio was designed and developed by <a href='https://twitter.com/Dev_abis' target="_blank">Abdallah Abis</a> using <a href='https://www.gatsbyjs.org/' target="_blank">GatsbyJS</a> and hosted on <a href='https://www.netlify.com/' target="_blank">Netlify</a>, the design was inspired by <a href='https://github.com/bchiang7' target="_blank">Brittany Chiang</a>,<strong> I hope you like it.</strong></p>
 
-
+<br />
+<br />
 🔐
 ## 💥 Fork IT, BUT PLEASE MENTION ME:exclamation:
 🔐
+<br />
+<br />
 
 
 ## 🛠 Installation & Set Up
