@@ -7,6 +7,7 @@ module.exports = {
     description: info.siteDescription,
   },
   plugins: [
+    "gatsby-plugin-styled-components",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-preact`,
     {
