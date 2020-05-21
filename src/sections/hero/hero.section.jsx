@@ -17,7 +17,6 @@ const HeroSection = ({ HeroData }) => {
     frontmatter: { name, slogan, buttonText },
     html,
   } = HeroData[0].node
-  console.log(html)
 
   return (
     <HeroContainer id='home'>

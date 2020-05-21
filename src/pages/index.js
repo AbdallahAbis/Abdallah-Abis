@@ -10,19 +10,15 @@ import ContactSection from "../sections/contact/contact.section"
 
 import "../globalStyles/index.css"
 
-const IndexPage = ({ data }) => {
-  console.log(data.Hero.edges)
-
-  return (
-    <Layout>
-      <HeroSection HeroData={data.Hero.edges} />
-      <AboutSection AboutData={data.About.edges} />
-      <WorkSection WorkData={data.Work.edges} />
-      <ExperimentsSection ExperimentsData={data.Experiments.edges} />
-      <ContactSection ContactData={data.Contact.edges} />
-    </Layout>
-  )
-}
+const IndexPage = ({ data }) => (
+  <Layout>
+    <HeroSection HeroData={data.Hero.edges} />
+    <AboutSection AboutData={data.About.edges} />
+    <WorkSection WorkData={data.Work.edges} />
+    <ExperimentsSection ExperimentsData={data.Experiments.edges} />
+    <ContactSection ContactData={data.Contact.edges} />
+  </Layout>
+)
 
 export default IndexPage
 

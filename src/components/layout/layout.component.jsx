@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -19,10 +19,9 @@ import { SocialMedia } from "./layout.styles"
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  React.useEffect(() => {
+  useEffect(() => {
     sal()
-        window.scrollTo(0, 0)
-
+    window.scrollTo(0, 0)
   })
 
   return (
