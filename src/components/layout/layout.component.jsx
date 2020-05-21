@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     sal()
     window.scrollTo(0, 0)
+    console.log('hi')
   })
 
   return (
