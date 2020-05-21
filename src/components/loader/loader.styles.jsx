@@ -26,41 +26,53 @@ const moveRight = keyframes`
 `
 
 export const OuterContainer = styled.div`
-  height: 100vh;
-  width: 100%;
   display: flex;
+
+  width: 100%;
+  height: 100vh;
+
+  background: var(--color-tertiary);
+
   align-items: center;
   justify-content: center;
-  background: var(--color-tertiary);
 
   display: ${({ loaded }) => (loaded ? "none" : "block")};
 `
 export const LoaderContainer = styled.div`
+  position: relative;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
-  position: relative;
 
   &:before,
   &:after {
     content: "";
+
+    position: absolute;
+
     width: 200%;
     height: 50%;
-    position: absolute;
+
     background: var(--color-secondary);
   }
 
   &:before {
     top: 0;
-    animation: ${moveRight} 1s;
+
     transform: translateX(-100%);
+    animation: ${moveRight} 1s;
+
     opacity: 0;
   }
 
   &:after {
     bottom: 0;
-    animation: ${moveLeft} 1s;
+
     transform: translateX(100%);
+    animation: ${moveLeft} 1s;
+
     opacity: 0;
   }
 `

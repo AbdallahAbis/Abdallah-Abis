@@ -6,29 +6,34 @@ import { rollInLeft, flickerIn } from "../../utils/animations"
 import CustomButton from "../../components/customButton/customButton.component"
 
 export const HeroContainer = styled.div`
-  height: 100vh;
-  padding: 23rem 0 0 20rem;
-  color: var(--color-primary);
+  position: relative;
 
   display: flex;
   flex-direction: column;
+
+  height: 100vh;
+  padding: 23rem 0 0 20rem;
+
+  color: var(--color-primary);
+
   justify-content: start;
   align-items: flex-start;
-
-  position: relative;
 
   @media ${device.laptop} {
     padding-top: 15rem;
   }
+
   @media ${device.tabLand} {
+    height: 100vh;
     padding-top: 20rem;
     padding-left: 10rem;
-    height: 100vh;
   }
+
   @media ${device.tabPort} {
-    padding: 0;
-    justify-content: center;
     height: 100vh;
+    padding: 0;
+
+    justify-content: center;
   }
 `
 export const TitleContainer = styled.div`
@@ -39,8 +44,10 @@ export const TitleContainer = styled.div`
   }
 `
 export const Title = styled.h1`
-  font-weight: bold;
   font-size: 9rem;
+  font-weight: bold;
+
+  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 
   @media ${device.phone} {
     font-size: 7rem;
@@ -48,14 +55,14 @@ export const Title = styled.h1`
   @media ${device.smallPhone} {
     font-size: 5.5rem;
   }
-
-  // Animation
-  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
 export const Slogan = styled.h2`
-  color: var(--color-secondary);
   font-family: var(--font-secondary);
   font-size: 2.4rem;
+
+  color: var(--color-secondary);
+
+  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 
   @media ${device.phone} {
     font-size: 2rem;
@@ -63,34 +70,35 @@ export const Slogan = styled.h2`
   @media ${device.smallPhone} {
     font-size: 1.5rem;
   }
-
-  // Animation
-  animation: ${flickerIn} 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s both;
 `
 export const Paragraph = styled.div`
   font-size: 1.8rem;
+  line-height: 30px;
+
   width: 50%;
   margin-bottom: 14rem;
-  line-height: 30px;
 
   transition-delay: 2.2s;
 
   @media ${device.laptop} {
-    margin-bottom: 10rem;
     font-size: 1.6rem;
+
     width: 45%;
+    margin-bottom: 10rem;
   }
 
   @media ${device.tabLand} {
     width: 60%;
   }
+
   @media ${device.tabPort} {
     width: 80%;
   }
 
   @media ${device.phone} {
-    width: 95%;
     font-size: 2rem;
+
+    width: 95%;
   }
 
   @media ${device.smallPhone} {
@@ -105,39 +113,45 @@ export const Button = styled(CustomButton)`
   }
 `
 export const Email = styled.a`
+  font-family: var(--font-secondary);
+  font-size: 1.3rem;
+
   position: absolute;
   bottom: 5%;
-  font-size: 1.3rem;
-  font-family: var(--font-secondary);
+
+  padding-left: 18rem;
+
   color: var(--color-secondary);
   background: transparent;
-  padding-left: 18rem;
+
+  animation: ${rollInLeft} 0.5s ease-out 2.5s both;
 
   &::before {
     content: "";
-    width: 15rem;
-    height: 1px;
-    background: var(--color-primary);
 
     position: absolute;
     top: 50%;
     left: 0;
 
+    width: 15rem;
+    height: 1px;
+
     pointer-events: none;
+
+    background: var(--color-primary);
   }
 
   @media ${device.tabLand} {
     bottom: 10%;
   }
+
   @media ${device.phone} {
-    bottom: 8%;
     font-size: 1.7rem;
+
+    bottom: 8%;
   }
 
   @media ${device.smallPhone} {
     bottom: 5%;
   }
-
-  // Animation
-  animation: ${rollInLeft} 0.5s ease-out 2.5s both;
 `

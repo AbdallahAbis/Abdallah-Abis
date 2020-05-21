@@ -7,9 +7,12 @@ import { rollInRight } from "../../utils/animations"
 
 export const BurgerMenu = styled(Burger)`
   display: none;
+
   @media ${device.tabPort} {
-    display: block;
     z-index: 100;
+
+    display: block;
+    animation: ${rollInRight} 2s ease-out 0.4s both;
 
     .burger-lines {
       &,
@@ -18,8 +21,5 @@ export const BurgerMenu = styled(Burger)`
         background: var(--color-secondary);
       }
     }
-
-    // Animation
-    animation: ${rollInRight} 2s ease-out 0.4s both;
   }
 `

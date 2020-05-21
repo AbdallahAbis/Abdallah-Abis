@@ -7,7 +7,6 @@ import "sal.js/dist/sal.css"
 
 import Head from "../../utils/head"
 import MenuContext from "../../contexts/hamburgerMenu.context"
-import ScrollToTop from "../../utils/scrollTop"
 
 import { GlobalStyles } from "../../globalStyles/globalStyles"
 

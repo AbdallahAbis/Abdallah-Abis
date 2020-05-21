@@ -5,20 +5,26 @@ import { rollInRight, rollInTop } from "../../utils/animations"
 
 export const HeaderContainer = styled.div`
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
+
   display: flex;
+
+  width: 100%;
+  padding: 2rem 10rem;
+
+  transition: 0.2s;
+
+  background: var(--color-tertiary);
+
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 10rem;
-  z-index: 100;
-  background: var(--color-tertiary);
-  transition: 0.2s;
 
   &.show {
     box-shadow: 0 1px 7px 6px rgba(0, 0, 0, 0.9);
   }
+
   &.hide {
     transform: translateY(-100%);
   }
@@ -35,27 +41,37 @@ export const HeaderContainer = styled.div`
 `
 export const OptionsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   height: 100%;
 
+  justify-content: space-between;
+  align-items: center;
+}
+
   @media ${device.tabPort} {
-    height: 100vh;
-    width: 70%;
-    background: var(--color-quaternary);
-    position: fixed;
+   position: fixed;
+    z-index: 10;
     top: 0;
     right: 0;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+    width: 70%;
+    height: 100vh;
     padding: 20% 0 40% 0;
+
+    transition: all .2s;
     transform: translateX(100%);
-    transition: all 0.2s;
-    z-index: 10;
+
+    background: var(--color-quaternary);
+
+    align-items: center;
+
     &.true {
-      transform: none;
       overflow: hidden;
+
+      transform: none;
     }
   }
 
@@ -66,9 +82,11 @@ export const OptionsContainer = styled.div`
 
 export const Option = styled.a`
   font-family: var(--font-secondary);
-  color: var(--color-primary);
   font-size: 1.4rem;
+
   transition: all 0.5s;
+
+  color: var(--color-primary);
 
   &:hover {
     color: var(--color-secondary);
@@ -76,11 +94,13 @@ export const Option = styled.a`
 
   &:last-child {
     color: var(--color-secondary);
+
     &:hover {
+      padding: 1rem 2rem;
+
       color: var(--color-primary);
       border: 1px solid var(--color-secondary);
       border-radius: 3px;
-      padding: 1rem 2rem;
     }
   }
 
@@ -96,11 +116,13 @@ export const Option = styled.a`
 
   @media ${device.tabPort} {
     &:last-child {
+      padding: 1rem 2rem;
+
       color: var(--color-secondary);
       border: 1px solid var(--color-secondary);
       border-radius: 3px;
-      padding: 1rem 2rem;
     }
+
     &:not(:last-child) {
       margin: 0;
     }
@@ -109,8 +131,6 @@ export const Option = styled.a`
   @media ${device.phone} {
     font-size: 2.2rem;
   }
-
-  // Animation
 
   &:nth-child(1) {
     animation: ${rollInTop} 2s ease-out both;

@@ -5,44 +5,54 @@ import { rollInBottom } from "../../utils/animations"
 
 export const EmailContainer = styled.div`
   position: fixed;
-  left: 10rem;
   bottom: 20%;
-  width: 3rem;
+  left: 10rem;
+
   display: flex;
+
+  width: 3rem;
+
+  animation: ${rollInBottom} 0.5s ease-in 3s both;
+
   justify-content: center;
 
   @media ${device.tabPort} {
     display: none;
   }
-
-  animation: ${rollInBottom} 0.5s ease-in 3s both;
 `
 export const EmailAddress = styled.a`
-  writing-mode: vertical-rl;
   font-family: var(--font-secondary);
   font-size: 1.3rem;
-  color: var(--color-primary);
-  transform: scale(-1, -1);
+
   position: relative;
-  letter-spacing: 3px;
 
   transition: all 0.5s;
+  transform: scale(-1, -1);
+  letter-spacing: 3px;
+
+  color: var(--color-primary);
+
+  writing-mode: vertical-rl;
+
   &::after {
-    content: "";
+    position: absolute;
+    top: -33rem;
+    left: 50%;
+
     width: 0.5px;
     height: 30rem;
-    background: var(--color-secondary);
-    position: absolute;
-    left: 50%;
-    top: -33rem;
-    transform: translate(-50%);
+
+    content: "";
     transition: all 0.5s;
+    transform: translate(-50%);
     pointer-events: none;
+
+    background: var(--color-secondary);
   }
 
   &:hover {
     color: var(--color-secondary);
-    
+
     &::after {
       background: var(--color-primary);
     }
