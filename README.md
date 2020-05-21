@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-Abdallah Abis Portfolio</h1>
+Abdallah Abis</h1>
 
 ![demo](./src/assets/images/website.png)
 
