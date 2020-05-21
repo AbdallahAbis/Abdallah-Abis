@@ -19,7 +19,7 @@ Abdallah Abis</h1>
 <br />
 
 🔐
-## 💥 Fork IT, BUT PLEASE MENTION ME:exclamation:
+## 💥 FORK IT, BUT PLEASE MENTION ME:exclamation:
 🔐
 
 <br />
