@@ -76,7 +76,7 @@ export const Paragraph = styled.div`
   font-size: 1.8rem;
   line-height: 30px;
 
-  width: 50%;
+  width: 40%;
   margin-bottom: 14rem;
 
   transition-delay: 2.2s;
@@ -93,6 +93,8 @@ export const Paragraph = styled.div`
   }
 
   @media ${device.tabPort} {
+    font-size: 1.8rem;
+
     width: 80%;
   }
 
@@ -147,7 +149,7 @@ export const Email = styled.a`
   }
 
   @media ${device.phone} {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 
     bottom: 8%;
   }

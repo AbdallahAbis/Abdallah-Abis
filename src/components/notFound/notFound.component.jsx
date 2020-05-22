@@ -1,6 +1,6 @@
 import React from "react"
 
-import { NotFoundContainer, Title, SubTitle, Paragraph } from "./404.styles"
+import { NotFoundContainer, Title, SubTitle, Paragraph } from "./notFound.styles"
 
 const NotFound = () => (
   <NotFoundContainer

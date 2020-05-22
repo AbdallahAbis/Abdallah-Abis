@@ -39,6 +39,10 @@ export const Paragraph = styled.div`
   grid-column: 1;
   grid-row: 2;
 
+  p:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
   @media ${device.tabLand} {
     width: 70%;
 
@@ -46,12 +50,14 @@ export const Paragraph = styled.div`
   }
 
   @media ${device.tabPort} {
+    font-size: 1.8rem;
+
     width: 90%;
   }
   @media ${device.phone} {
     width: 100%;
 
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 `
 export const SkillsContainer = styled.div`
@@ -98,12 +104,13 @@ export const SkillsContainer = styled.div`
   }
 
   @media ${device.tabPort} {
+    font-size: 1.6rem;
     width: 80%;
   }
   @media ${device.phone} {
     width: 90%;
 
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 `
 export const Skill = styled.p`

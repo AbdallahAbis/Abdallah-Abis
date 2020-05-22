@@ -30,13 +30,17 @@ export const SubTitle = styled.div`
   margin-bottom: 1rem;
 
   color: var(--color-secondary);
+
+  @media ${device.phone} {
+    font-size: 2rem;
+  }
 `
 export const ContactTitle = styled.div`
   font-weight: bold;
   font-size: 7rem;
 
   @media ${device.tabLand} {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 `
 export const Paragraph = styled.div`
@@ -46,6 +50,14 @@ export const Paragraph = styled.div`
   margin: 3rem 0 7rem 0;
 
   text-align: center;
+
+  @media ${device.tabPort} {
+    font-size: 1.8rem;
+  }
+
+  @media ${device.phone} {
+    font-size: 2rem;
+  }
 `
 
 export const Button = styled(CustomButton)`
