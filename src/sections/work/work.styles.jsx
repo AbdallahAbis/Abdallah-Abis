@@ -181,6 +181,8 @@ export const Paragraph = styled.div`
   font-size: 1.6rem;
   line-height: 30px;
 
+  text-align: center;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -193,7 +195,7 @@ export const Paragraph = styled.div`
   color: var(--color-primary);
 
   @media ${device.phone} {
-    font-size: 1.8rem;
+    font-size: 2rem;
 
     top: 40%;
 
@@ -226,7 +228,7 @@ export const TechnologiesContainer = styled.div`
   }
 
   @media ${device.phone} {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 
     bottom: 10.5rem;
     left: 3.5rem;

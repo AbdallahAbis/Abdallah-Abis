@@ -83,4 +83,9 @@ export const ExperimentTitle = styled.p`
   width: 100%;
 
   color: var(--color-primary);
+
+  @media ${device.phone} {
+    font-size: 1.8rem;
+    bottom: -3rem;
+  }
 `
