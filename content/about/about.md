@@ -2,11 +2,12 @@
 title: "About Me."
 skills:
   - HTML5 & CSS3
-  - JavaScript / ES6
-  - React.js
   - Redux.js
+  - JavaScript / ES6
   - Sass & Scss
+  - React.js
   - Tailwind
+  - Gatsby.js
   - Bootstrap
 ---
 

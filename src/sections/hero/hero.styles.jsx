@@ -3,7 +3,7 @@ import device from "../../globalStyles/media-queries"
 
 import { rollInLeft, flickerIn } from "../../utils/animations"
 
-import CustomButton from "../../components/customButton/customButton.component"
+import { Link } from "gatsby"
 
 export const HeroContainer = styled.div`
   position: relative;
@@ -108,11 +108,33 @@ export const Paragraph = styled.div`
     font-size: 1.8rem;
   }
 `
-export const Button = styled(CustomButton)`
+export const Button = styled(Link)`
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+
+  padding: 1.5rem 2rem;
+
+  cursor: pointer;
+
+  color: var(--color-secondary);
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  background: transparent;
+
   transition-delay: 2.5s;
 
+  @media ${device.laptop} {
+    padding: 1.5rem 2rem;
+  }
+
   @media ${device.phone} {
+    font-size: 1.8rem;
     margin-bottom: 10rem;
+    padding: 2rem 2.4rem;
+  }
+
+  @media ${device.smallPhone} {
+    font-size: 1.8rem;
   }
 `
 export const Email = styled.a`

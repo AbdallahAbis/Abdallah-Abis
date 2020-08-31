@@ -53,7 +53,7 @@ export const CardContainer = styled.div`
         transition: all 0.2s;
       }
       #title {
-        transform: translateX(150%);
+        transform: translateX(25rem);
         transition: all 0.2s;
       }
       #paragraph {
