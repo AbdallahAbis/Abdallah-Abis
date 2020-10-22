@@ -12,7 +12,7 @@ import {
 
 const ContactSection = ({ ContactData }) => {
   const {
-    frontmatter: { subtitle, title, buttonText },
+    frontmatter: { subtitle, title, buttonText, upWorkButton },
     html,
   } = ContactData[0].node
 
@@ -28,6 +28,13 @@ const ContactSection = ({ ContactData }) => {
       <Paragraph dangerouslySetInnerHTML={{ __html: html }} />
       <a aria-label="mail to me" href={`mailto:${info.email}`}>
         <Button>{buttonText}</Button>
+      </a>
+      <a
+        aria-label="Visit My UpWork Profile"
+        href={info.upWork}
+        target="_blank"
+      >
+        <Button>{upWorkButton}</Button>
       </a>
     </ContactContainer>
   )

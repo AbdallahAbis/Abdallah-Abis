@@ -20,7 +20,9 @@ const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    sal()
+    sal({
+      threshold: 0.1,
+    })
   })
 
   return (

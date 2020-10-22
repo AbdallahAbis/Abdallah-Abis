@@ -12,7 +12,15 @@ export const Button = styled.button`
   color: var(--color-secondary);
   border: 1px solid currentColor;
   border-radius: 5px;
-  background: transparent;
+  background: var(--color-tertiary);
+
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    background: var(--color-secondary);
+    color: var(--color-tertiary);
+    transition: all 0.3s ease-in;
+  }
 
   @media ${device.laptop} {
     padding: 1.5rem 2rem;

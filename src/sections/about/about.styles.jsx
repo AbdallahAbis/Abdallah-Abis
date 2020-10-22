@@ -4,7 +4,7 @@ import device from "../../globalStyles/media-queries"
 export const AboutContainer = styled.div`
   display: grid;
 
-  min-height: 100vh;
+  min-height: 80vh;
   padding-right: 5rem;
   padding-left: 20rem;
 

@@ -97,6 +97,7 @@ export const IndexQuery = graphql`
             subtitle
             title
             buttonText
+            upWorkButton
           }
           html
         }

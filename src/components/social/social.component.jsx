@@ -7,10 +7,11 @@ import LinkedIn from "../../assets/icons/linkedin.inline.svg"
 import CodePen from "../../assets/icons/codepen.inline.svg"
 import Twitter from "../../assets/icons/twitter.inline.svg"
 import Instagram from "../../assets/icons/instagram.inline.svg"
+import UpWork from "../../assets/icons/upwork.inline.svg"
 
 import { SocialContainer, Icon } from "./social.styles"
 
-const SVG = ({ name }) => (
+const SVG = ({ name }) =>
   name === "LinkedIn" ? (
     <LinkedIn />
   ) : name === "CodePen" ? (
@@ -19,10 +20,11 @@ const SVG = ({ name }) => (
     <Twitter />
   ) : name === "Instagram" ? (
     <Instagram />
+  ) : name === "upWork" ? (
+    <UpWork />
   ) : (
     <Github />
   )
-)
 
 const Social = props => (
   <SocialContainer {...props}>

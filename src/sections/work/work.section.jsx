@@ -28,7 +28,7 @@ const WorkSection = ({ WorkData }) => {
       >
         Latest Works.
       </Title>
-      {WorkData.map(
+      {WorkData.reverse().map(
         (
           {
             node: {

@@ -11,7 +11,12 @@ module.exports = {
   email: "Abis.Abdallah@gmail.com",
   github: "https://github.com/AbdallahAbis",
   twitterHandle: "@Dev_abis",
+  upWork: "https://www.upwork.com/freelancers/~012d12ad79941dfff5",
   socialMedia: [
+    {
+      name: "upWork",
+      url: "https://www.upwork.com/freelancers/~012d12ad79941dfff5",
+    },
     {
       name: "GitHub",
       url: "https://github.com/AbdallahAbis",

@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import info from "../../info"
+import { Link } from "gatsby"
 
 import {
   HeroContainer,
@@ -30,15 +31,17 @@ const HeroSection = ({ HeroData }) => {
         data-sal-duration="1000"
         data-sal-easing="ease-out-back"
       />
-      <Button
-        href="/#about"
-        aria-label="check my skills"
-        data-sal="slide-up"
-        data-sal-duration="1000"
-        data-sal-easing="ease-out-back"
-      >
-        {buttonText}
-      </Button>
+      <Link to="/#about">
+        <Button
+          aria-label="check my skills"
+          data-sal="slide-up"
+          data-sal-duration="1000"
+          data-sal-easing="ease-out-back"
+        >
+          {buttonText}
+        </Button>
+      </Link>
+
       <Email aria-label="mail me" href={`mailto:${info.email}`}>
         {info.email}
       </Email>

@@ -12,6 +12,7 @@ export const ContactContainer = styled.div`
   color: var(--color-primary);
 
   align-items: center;
+  padding-bottom: 25rem;
 
   @media ${device.tabLand} {
     width: 80%;
@@ -61,5 +62,5 @@ export const Paragraph = styled.div`
 `
 
 export const Button = styled(CustomButton)`
-  margin-bottom: 25rem;
+  margin-bottom: 3rem;
 `
